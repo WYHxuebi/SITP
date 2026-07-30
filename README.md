@@ -1,4 +1,3 @@
-# SITP
 
 <h1 align="center">
 SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication
