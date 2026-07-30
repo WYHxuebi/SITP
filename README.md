@@ -1,3 +1,7 @@
+# SITP
+[TCOM 2026] Official implementation of "SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication".
+
+
 # 训练流程
 
 ## Train
@@ -60,3 +64,4 @@ CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch --nproc_per_node=1 --m
 
 ## 预训练权重
 All pretrain models can be found in [Baidu netdisk](https://pan.baidu.com/s/13_Lb8wFVio9PFU4jiySrhA "password:hxzo")(password:hxzo) or [Google drive](https://drive.google.com/drive/folders/1YdnShbfIT03p_e30vjkV2wPKYOQPmUWp?usp=share_link).
+
