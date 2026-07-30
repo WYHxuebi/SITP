@@ -17,7 +17,7 @@ IEEE Transactions on Communications, 2026
 
 <p align="center">
 
-<a href="">
+<a href="https://ieeexplore.ieee.org/document/11517511">
 <img src="https://img.shields.io/badge/Paper-IEEE%20TCOM-blue">
 </a>
 
