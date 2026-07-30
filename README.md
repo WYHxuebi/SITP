@@ -1,5 +1,106 @@
 # SITP
-[TCOM 2026] Official implementation of "SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication".
+
+<h1 align="center">
+SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication
+</h1>
+
+
+<p align="center">
+
+Official implementation of:
+
+**"SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication"**
+
+IEEE Transactions on Communications, 2026
+
+</p>
+
+
+<p align="center">
+
+<a href="">
+<img src="https://img.shields.io/badge/Paper-IEEE%20TCOM-blue">
+</a>
+
+<a href="https://github.com/WYHxuebi/SITP">
+<img src="https://img.shields.io/github/stars/WYHxuebi/SITP?style=social">
+</a>
+
+</p>
+
+
+
+## 📌 Overview
+
+
+Traditional communication protocols, such as TCP and UDP, are designed for
+bit-level reliability. However, semantic communication (SemCom) systems can
+tolerate noisy semantic representations and reconstruct meaningful information
+from corrupted features.
+
+To bridge this gap, we propose **Semantic Information Transport Protocol
+(SITP)**, a novel transport-layer protocol specifically designed for semantic
+communication.
+
+
+Unlike TCP, SITP removes handshake and retransmission mechanisms to achieve
+low latency.
+
+Unlike UDP, SITP does not discard corrupted packets. Instead, SITP verifies
+only packet headers and preserves noisy payloads for semantic decoding.
+
+
+The proposed SITP achieves:
+
+- ✅ TCP-level reliability
+- ✅ UDP-level latency
+- ✅ Robust semantic reconstruction under packet errors
+- ✅ Enhanced robustness against burst packet losses
+
+
+
+## 🚀 Key Contributions
+
+
+### 1. Semantic Information Transport Protocol (SITP)
+
+SITP introduces a new transport-layer paradigm for semantic communication.
+
+The key idea is:
+
+> "Verify the header, preserve the payload."
+
+The SITP packet only performs checksum verification on header information,
+while allowing corrupted semantic payloads to be delivered to the semantic
+decoder.
+
+Compared with conventional protocols:
+
+| Protocol | Retransmission | Payload Verification | Semantic Payload Preservation |
+|---|---|---|---|
+| TCP | ✓ | Full | ✗ |
+| UDP | ✗ | Full | ✗ |
+| UDP-Lite | ✗ | Partial | ✗ |
+| **SITP (Ours)** | ✗ | Header-only | ✓ |
+
+
+
+---
+
+### 2. Cross-layer Packet Loss Modeling
+
+
+SITP establishes a cross-layer analytical model considering:
+
+- Physical layer
+- Data-link layer
+- Network layer
+- Transport layer
+- Application layer
+
+
+The model provides a unified relationship between:
+
 
 
 # 训练流程
