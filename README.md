@@ -104,17 +104,9 @@ The model characterizes the end-to-end relationship
 $$
 P_{\text{Cross-fail}}(P_b)
 = 1-(1-P_{\text{Phy-fail}})(1-P_{\text{Dalink-fail}})(1-P_{\text{Net-fail}})(1-P_{\text{SITP-fail}})(1-P_{\text{App-fail}}),
-$$
-
-$$
 = 1-(1-P_b)^{8\cdot (N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
 \cdot
-\left[
-\sum_{i=0}^{t_{\mathrm{sync}}}
-\binom{8\cdot N_{\mathrm{sync}}}{i}
-P_b^i
-(1-P_b)^{8\cdot N_{\mathrm{sync}}-i}
-\right]
+\left[\sum_{i=0}^{t_{\mathrm{sync}}} \binom{8\cdot N_{\mathrm{sync}}}{i} P_b^i (1-P_b)^{8\cdot N_{\mathrm{sync}}-i} \right]
 \cdot
 \left\{
 1-\left[1-(1-P_b)^{8\cdot N_{\mathrm{DH}}}\right]\cdot (1-2^{-r_d})
