@@ -163,7 +163,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📂 Dataset Preparation
+## 📂 7. Dataset Preparation
 
 The experiments in this repository use the following datasets:
 
@@ -236,45 +236,17 @@ After downloading, please extract the files and organize them under the './datas
                     ...
     ```
 </details>
+
 ---
 
-## 🏋️ Training
+## 🏋️ 8. Training
 
-Training is divided into two stages.
+SITP is trained in two stages:
+
+- **Stage 1:** train the semantic communication backbone over multiple SNR conditions;
+- **Stage 2:** fine-tune the model under packet losses with semantic feature interleaving.
 
 ### Stage 1: Semantic Communication Backbone
-
-#### Single GPU, single SNR
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 train.py \
-  --training \
-  --train-stage=1 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=48
-```
-
-#### Multi-GPU, single SNR
-
-```bash
-CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
-  --nproc_per_node=2 train.py \
-  --training \
-  --train-stage=1 \
-  --trainset='IMAGENET10' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=48
-```
-
-#### Multi-GPU, multiple SNRs
 
 ```bash
 CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
@@ -289,13 +261,11 @@ CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
   --batch-size=52
 ```
 
-### Stage 2: Interleaving-Aware Training
+### Stage 2: Interleaving-Aware Fine-Tuning
 
-#### Single GPU, random interleaving, IID frame loss
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 train.py \
+```
+CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
+  --nproc_per_node=2 train.py \
   --training \
   --train-stage=2 \
   --trainset='IMAGENET10' \
@@ -310,62 +280,11 @@ CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
   --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
 ```
 
-#### Multi-GPU, sequential interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
-  --nproc_per_node=2 train.py \
-  --training \
-  --train-stage=2 \
-  --trainset='IMAGENET10' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=56 \
-  --frame-len=256 \
-  --interleave-mode='sequential' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
-
-#### Multi-GPU, random interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
-  --nproc_per_node=2 train.py \
-  --training \
-  --train-stage=2 \
-  --trainset='IMAGENET10' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=56 \
-  --frame-len=256 \
-  --interleave-mode='random' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
-
-#### Multi-GPU, random interleaving, burst loss
-
-```bash
-CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
-  --nproc_per_node=2 train.py \
-  --training \
-  --train-stage=2 \
-  --trainset='IMAGENET10' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='burst' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=56 \
-  --frame-len=256 \
-  --interleave-mode='random' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
+**NOTE: Training logs, checkpoints, reconstructed samples, and figures are automatically saved under the timestamped ./history directory.**
 
 ---
+
+
 
 ## 🧪 Evaluation
 
