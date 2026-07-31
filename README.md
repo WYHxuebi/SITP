@@ -312,8 +312,9 @@ The scripts contain the complete evaluation commands and can be modified to sele
 
 Pretrained model checkpoints are available on [ModelScope](https://www.modelscope.cn/models/wyh13114873863/SITP).
 
-After downloading, place the checkpoints under the `./weight/` directory:
+After downloading, place the checkpoints under the './weight' directory:
   <details>
+    
     ```
     ./weight
         /AFHQ_IW_AWGN.model
