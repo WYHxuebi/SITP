@@ -130,6 +130,23 @@ Instead of independently protecting each image, semantic features from multiple 
   <em> Figure 2: The overall architecture of the proposed SITP-based digital semantic communication system for the burst-loss resilience.</em>
 </p>
 
+<p align="center">
+  <a href="./figures/The_overall_architecture.png">
+    <img
+      src="./figures/The_overall_architecture.png"
+      alt="Overall architecture of the SITP-based digital semantic communication system"
+      width="100%"
+    >
+  </a>
+  <br>
+  <sub>
+    <em>
+      Figure 2. Overall architecture of the proposed SITP-based digital semantic communication system for burst-loss resilience.
+      Click the figure to view it at full resolution.
+    </em>
+  </sub>
+</p>
+
 ---
 
 ## 📦 Installation
