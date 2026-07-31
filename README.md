@@ -44,6 +44,10 @@
 
 ## 🔍 2. Overview
 
+<p align="center">
+  <img src="./figures/Cross_Layer_Architecture.png" width="900" alt="SITP Cross Layer Architecture">
+</p>
+
 Conventional transport protocols such as TCP and UDP are designed around **bit-level reliability**. However, semantic communication can often reconstruct meaningful information even when the received semantic representation is partially corrupted.
 
 To bridge this gap, we propose the **Semantic Information Transport Protocol (SITP)**, a transport-layer protocol specifically designed for semantic communication, which follows a simple principle:
