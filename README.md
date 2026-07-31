@@ -323,7 +323,7 @@ After downloading, place the checkpoints under the './weight' directory:
 
 ---
 
-## 📊 Results
+## 📊 11. Results
 
 SITP is designed to provide:
 
