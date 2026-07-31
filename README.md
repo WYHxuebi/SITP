@@ -172,6 +172,58 @@ The experiments use:
 
 Please organize the datasets according to the paths expected by the data-loading code. A recommended directory structure is:
 
+
+    ```
+    ./dataset
+        /AFHQ:
+            /train:
+                /cat
+                    /flickr_cat_000002.jpg 
+                    /flickr_cat_000003.jpg
+                    ...
+                /dog
+                    /flickr_dog_000002.jpg 
+                    /flickr_dog_000003.jpg
+                    ...
+                /wild
+                    /flickr_wild_000002.jpg 
+                    /flickr_wild_000003.jpg
+                    ...
+            /val:
+                /cat
+                    /flickr_cat_000008.jpg 
+                    /flickr_cat_000011.jpg
+                    ...
+                /dog
+                    /flickr_dog_000043.jpg 
+                    /flickr_dog_000045.jpg  
+                    ...
+                /wild
+                    /flickr_wild_000004.jpg 
+                    /flickr_wild_000012.jpg
+                    ...
+        /IMAGENET10:
+            /train:
+                    /n02056570
+                        /n02056570_41.JPEG
+                        /n02056570_42.JPEG
+                        ...
+                    /n02085936
+                        ...
+                    /n02128757
+                        ...
+                    ...
+            /val:
+                    /n02056570
+                        /n02056570_45.JPEG
+                        /n02056570_48.JPEG
+                    /n02085936
+                        ...
+                    /n02128757
+                        ...
+                    ...
+    ```
+
 ```text
 datasets/
 ├── AFHQ/
