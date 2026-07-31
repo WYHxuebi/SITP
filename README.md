@@ -8,6 +8,12 @@
   <a href="https://ieeexplore.ieee.org/document/11517511">
     <img src="https://img.shields.io/badge/Paper-IEEE%20TCOM-blue" alt="Paper">
   </a>
+  <a href="https://huggingface.co/datasets/YunhaoWang/SITP">
+    <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset">
+  </a>
+  <a href="https://www.modelscope.cn/models/wyh13114873863/SITP">
+    <img src="https://img.shields.io/badge/ModelScope-Model-624AFF" alt="ModelScope Model">
+  </a>
   <a href="https://github.com/WYHxuebi/SITP/stargazers">
     <img src="https://img.shields.io/github/stars/WYHxuebi/SITP?style=social" alt="GitHub stars">
   </a>
