@@ -101,11 +101,34 @@ We establish a unified analytical model covering the:
 
 The model characterizes the end-to-end relationship
 
-```text
-SNR → BER → Cross-layer packet-loss rate
-```
+$$
+P_{\text{Cross-fail}}(P_b)
+= 1-(1-P_{\text{Phy-fail}})(1-P_{\text{Dalink-fail}})(1-P_{\text{Net-fail}})(1-P_{\text{SITP-fail}})(1-P_{\text{App-fail}}),
+$$
 
-and provides a practical tool for analyzing semantic transmission over digital communication systems.
+$$
+= 1-(1-P_b)^{8\cdot (N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
+\cdot
+\left[
+\sum_{i=0}^{t_{\mathrm{sync}}}
+\binom{8\cdot N_{\mathrm{sync}}}{i}
+P_b^i
+(1-P_b)^{8\cdot N_{\mathrm{sync}}-i}
+\right]
+\cdot
+\left\{
+1-\left[1-(1-P_b)^{8\cdot N_{\mathrm{DH}}}\right]\cdot (1-2^{-r_d})
+\right\}
+$$
+
+$$
+\cdot
+\left\{
+1-\left[1-(1-P_b)^{8\cdot N_{\mathrm{SITP\_HDR}}}\right]\cdot (1-2^{-r_s})
+\right\}.
+$$
+
+This formulation provides a practical tool for analyzing semantic transmission over digital communication systems.
 
 ### 4.3 Cross-Image Feature Interleaving
 
