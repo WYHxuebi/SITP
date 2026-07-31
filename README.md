@@ -1,12 +1,12 @@
 
 <h1 align="center">
-SITP
+** SITP **
 </h1>
 
 
 <p align="center">
 
-**"A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication"**
+**A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication**
 
 IEEE Transactions on Communications, 2026
 
