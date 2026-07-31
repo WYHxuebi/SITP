@@ -109,7 +109,9 @@ and provides a practical tool for analyzing semantic transmission over digital c
 
 ### 4.3 Cross-Image Feature Interleaving
 
-To mitigate consecutive burst losses, SITP incorporates a cross-image semantic feature-level interleaving mechanism. Instead of independently protecting each image, semantic features from multiple images are redistributed across packets, which prevents concentrated packet losses from causing complete semantic collapse in a single image.
+To mitigate consecutive burst losses, SITP incorporates a cross-image semantic feature-level interleaving mechanism. 
+
+Instead of independently protecting each image, semantic features from multiple images are redistributed across packets, which prevents concentrated packet losses from causing complete semantic collapse in a single image.
 
 ---
 
