@@ -336,7 +336,7 @@ Detailed quantitative and qualitative results are reported in the paper.
 
 ---
 
-## 📝 Citation
+## 📝 12. Citation
 
 Please cite our paper when using this repository:
 
