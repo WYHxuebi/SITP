@@ -21,8 +21,7 @@
 </p>
 
 <p align="center">
-  <br>
-  <b>*SITP enables low-latency and high-reliability semantic communication by validating only packet headers, preserving corrupted payloads for reconstruction, and mitigating burst losses through cross-image feature interleaving.*</b>
+  <em>SITP enables low-latency and high-reliability semantic communication by validating only packet headers, preserving corrupted payloads for reconstruction, and mitigating burst losses through cross-image feature interleaving.</em>
 </p>
 
 ---
