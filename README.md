@@ -107,6 +107,7 @@ P_{\text{Cross-fail}}(P_b)
 $$
 
 $$
+P_{\text{Cross-fail}}(P_b)
 = 1-(1-P_{\mathrm{Phy\mbox{-}fail}})
 (1-P_{\mathrm{Dalink\mbox{-}fail}})
 (1-P_{\mathrm{Net\mbox{-}fail}})
