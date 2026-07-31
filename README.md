@@ -106,6 +106,44 @@ P_{\text{Cross-fail}}(P_b)
 = 1-(1-P_{\text{Phy-fail}})(1-P_{\text{Dalink-fail}})(1-P_{\text{Net-fail}})(1-P_{\text{SITP-fail}})(1-P_{\text{App-fail}}),
 $$
 
+$$
+P_{\mathrm{Cross\mbox{-}fail}}(P_b)
+=
+1-
+(1-P_{\mathrm{Phy\mbox{-}fail}})
+(1-P_{\mathrm{Dalink\mbox{-}fail}})
+(1-P_{\mathrm{Net\mbox{-}fail}})
+(1-P_{\mathrm{SITP\mbox{-}fail}})
+(1-P_{\mathrm{App\mbox{-}fail}})
+$$
+
+$$
+P_{\mathrm{Cross\mbox{-}fail}}(P_b)
+=
+1-
+(1-P_b)^{8(N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
+\left[
+\sum_{i=0}^{t_{\mathrm{sync}}}
+{8N_{\mathrm{sync}} \choose i}
+P_b^i
+(1-P_b)^{8N_{\mathrm{sync}}-i}
+\right]
+\left(
+1-
+\left[
+1-(1-P_b)^{8N_{\mathrm{DH}}}
+\right]
+(1-2^{-r_d})
+\right)
+\left(
+1-
+\left[
+1-(1-P_b)^{8N_{\mathrm{SITP-HDR}}}
+\right]
+(1-2^{-r_s})
+\right)
+$$
+
 This formulation provides a practical tool for analyzing semantic transmission over digital communication systems.
 
 ### 4.3 Cross-Image Feature Interleaving
