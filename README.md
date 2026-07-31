@@ -105,6 +105,7 @@ $$
 P_{\text{Cross-fail}}(P_b)
 = 1-(1-P_{\text{Phy-fail}})(1-P_{\text{Dalink-fail}})(1-P_{\text{Net-fail}})(1-P_{\text{SITP-fail}})(1-P_{\text{App-fail}}),
 $$
+
 This formulation provides a practical tool for analyzing semantic transmission over digital communication systems.
 
 ### 4.3 Cross-Image Feature Interleaving
