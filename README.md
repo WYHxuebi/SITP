@@ -38,11 +38,11 @@
 - **[2026-07-30]** 🎉 We release the official implementation of **SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication**.
 - **[2026-05-13]** 📄 SITP was accepted by **IEEE Transactions on Communications**.
 
-> The repository provides the official implementation, pretrained resources, training scripts, and evaluation code for SITP.
+> The repository provides the official implementation, pretrained models, training scripts, and evaluation code for SITP.
 
 ---
 
-## 📌 Overview
+## 🔍 2. Overview
 
 Conventional transport protocols such as TCP and UDP are designed around **bit-level reliability**. However, semantic communication systems can often reconstruct meaningful information even when the received semantic representation is partially corrupted.
 
