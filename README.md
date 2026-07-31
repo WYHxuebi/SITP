@@ -171,7 +171,7 @@ The experiments use:
 - **ImageNet-10**
 
 Please organize the datasets according to the paths expected by the data-loading code. A recommended directory structure is:
-
+<summary> assume the AFHQ dataset is in "./dataset/AFHQ". It should be like this:</summary> 
 
     ```
     ./dataset
@@ -209,8 +209,12 @@ Please organize the datasets according to the paths expected by the data-loading
                         /n02056570_42.JPEG
                         ...
                     /n02085936
+                        /n02085936_14.JPEG
+                        /n02085936_26.JPEG
                         ...
                     /n02128757
+                        /n02128757_10.JPEG
+                        /n02128757_34.JPEG
                         ...
                     ...
             /val:
@@ -218,8 +222,12 @@ Please organize the datasets according to the paths expected by the data-loading
                         /n02056570_45.JPEG
                         /n02056570_48.JPEG
                     /n02085936
+                        /n02085936_37.JPEG
+                        /n02085936_37.JPEG
                         ...
                     /n02128757
+                        /n02128757_114.JPEG
+                        /n02128757_226.JPEG
                         ...
                     ...
     ```
