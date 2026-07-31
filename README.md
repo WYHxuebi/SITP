@@ -1,14 +1,12 @@
 
 <h1 align="center">
-SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication
+SITP
 </h1>
 
 
 <p align="center">
 
-Official implementation of:
-
-**"SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication"**
+**"A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication"**
 
 IEEE Transactions on Communications, 2026
 
@@ -25,6 +23,12 @@ IEEE Transactions on Communications, 2026
 <img src="https://img.shields.io/github/stars/WYHxuebi/SITP?style=social">
 </a>
 
+arxiv
+dataset
+weight
+license
+contributors
+reposize
 </p>
 
 
