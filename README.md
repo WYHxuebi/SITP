@@ -116,8 +116,6 @@ P_b^i
 \right)
 $$
 
-This formulation provides a practical analytical tool for evaluating the reliability of SITP-based semantic transmission under different channel conditions.
-
 ### 4.3 Cross-Image Feature Interleaving
 
 To mitigate consecutive burst losses, SITP incorporates a cross-image semantic feature-level interleaving mechanism. 
@@ -126,11 +124,14 @@ Instead of independently protecting each image, semantic features from multiple 
 
 ---
 
-## 🏗️ Framework
+## 🏗️ 5. Framework
 
 <p align="center">
-  <img src="./figures/framework.png" width="900" alt="SITP framework">
+  <img src="./figures/The_overall_architecture.png" width="900" alt="SITP framework">
+  <br>
+  <em> Figure 2: The overall architecture of the proposed SITP-based digital semantic communication system for the burst-loss resilience.</em>
 </p>
+
 
 The overall SITP-based semantic communication pipeline consists of:
 
