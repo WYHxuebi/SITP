@@ -45,12 +45,6 @@
 ## 🖼️ 2. Overview Figure
 
 <p align="center">
-  <img src="./figures/Cross_Layer_Architecture.png" width="900" alt="SITP Cross Layer Architecture">
-  <br>
-  <em> Figure 1: The cross-layer architecture of digital semantic communication based on SITP. Note: AH, NH, DH, and PH denote the application-layer header, network header, data-link header, and physical-layer header, respectively.</em>
-</p>
-
-<p align="center">
   <a href="./figures/Cross_Layer_Architecture.png">
     <img
       src="./figures/Cross_Layer_Architecture.png"
@@ -59,7 +53,7 @@
     >
   </a>
   <br>
-  <em> Figure 2: The overall architecture of the proposed SITP-based digital semantic communication system for the burst-loss resilience.</em>
+  <em> Figure 1: The cross-layer architecture of digital semantic communication based on SITP. Note: AH, NH, DH, and PH denote the application-layer header, network header, data-link header, and physical-layer header, respectively.</em>
 </p>
 
 ---
