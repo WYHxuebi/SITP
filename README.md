@@ -78,10 +78,10 @@ The resulting system provides:
 
 ### (1) Semantic Information Transport Protocol
 
-SITP introduces a transport-layer design tailored to the error tolerance of semantic communication systems. By retaining payloads whose headers pass verification, SITP allows the semantic decoder to exploit residual information that would otherwise be discarded.
+SITP introduces a transport-layer design tailored to the error tolerance of semantic communication. By retaining payloads whose headers pass verification, SITP allows the semantic decoder to exploit residual information that would otherwise be discarded.
 
-| Protocol| Handshake / Retransmission | Validation Coverage | Noisy Payload Retained |
-|---      |---:|---:|---:|
+| Protocol| Handshake / Retrans. | Validation Coverage | Noisy Payload Retained |
+|:---:|:---:|:---:|:---:|
 | TCP     | 3-way handshake and ACK retrans.| Header + payload | No |
 | UDP     | No handshake or retrans.| Header + payload | No |
 | UDP-Lite| No handshake or retrans.| Header + partial payload | Partially |
