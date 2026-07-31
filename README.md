@@ -165,14 +165,17 @@ pip install -r requirements.txt
 
 ## 📂 Dataset Preparation
 
-The experiments use:
+The experiments in this repository use the following datasets:
 
 - **AFHQ**
 - **ImageNet-10**
 
-Please organize the datasets according to the paths expected by the data-loading code. A recommended directory structure is:
-<summary> assume the AFHQ dataset is in "./dataset/AFHQ". It should be like this:</summary> 
+The processed datasets can be downloaded from our Hugging Face dataset page:
 
+- [Hugging Face Dataset: YunhaoWang/SITP](https://huggingface.co/datasets/YunhaoWang/SITP)
+
+After downloading, please extract the files and organize them under the './dataset' directory as follows:
+  <details>
     ```
     ./dataset
         /AFHQ:
@@ -231,13 +234,7 @@ Please organize the datasets according to the paths expected by the data-loading
                         ...
                     ...
     ```
-
-```text
-datasets/
-├── AFHQ/
-└── IMAGENET10/
-```
-
+</details>
 ---
 
 ## 🏋️ Training
