@@ -103,23 +103,16 @@ The model characterizes the end-to-end relationship
 
 $$
 P_{\text{Cross-fail}}(P_b)
-= 1-(1-P_{\text{Phy-fail}})(1-P_{\text{Dalink-fail}})(1-P_{\text{Net-fail}})(1-P_{\text{SITP-fail}})(1-P_{\text{App-fail}}),
-$$
-
-$$
-P_{\text{Cross-fail}}(P_b)
-= 1-(1-P_{\mathrm{Phy\mbox{-}fail}})
-(1-P_{\mathrm{Dalink\mbox{-}fail}})
-(1-P_{\mathrm{Net\mbox{-}fail}})
-(1-P_{\mathrm{SITP\mbox{-}fail}})
-(1-P_{\mathrm{App\mbox{-}fail}})
+= 1-(1-P_{\text{Phy-fail}})
+(1-P_{\text{Dalink-fail}})
+(1-P_{\text{Net-fail}})
+(1-P_{\text{SITP-fail}})
+(1-P_{\text{App-fail}}),
 $$
 
 $$
 P_{\mathrm{Cross\mbox{-}fail}}(P_b)
-=
-1-
-(1-P_b)^{8(N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
+=1-(1-P_b)^{8(N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
 \left[
 \sum_{i=0}^{t_{\mathrm{sync}}}
 {8N_{\mathrm{sync}} \choose i}
