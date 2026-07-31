@@ -102,44 +102,41 @@ We establish a unified analytical model covering the:
 The model characterizes the end-to-end relationship
 
 $$
-\begin{aligned}
-P_{\mathrm{Cross\text{-}fail}}(P_b)
-={}&1-
-(1-P_{\mathrm{Phy\text{-}fail}})
-(1-P_{\mathrm{Dalink\text{-}fail}})
-(1-P_{\mathrm{Net\text{-}fail}})
-(1-P_{\mathrm{SITP\text{-}fail}})
-(1-P_{\mathrm{App\text{-}fail}})
-\\[4pt]
-={}&1-
+P_{\mathrm{Cross\mbox{-}fail}}(P_b)
+=
+1-
+(1-P_{\mathrm{Phy\mbox{-}fail}})
+(1-P_{\mathrm{Dalink\mbox{-}fail}})
+(1-P_{\mathrm{Net\mbox{-}fail}})
+(1-P_{\mathrm{SITP\mbox{-}fail}})
+(1-P_{\mathrm{App\mbox{-}fail}})
+$$
+
+$$
+P_{\mathrm{Cross\mbox{-}fail}}(P_b)
+=
+1-
 (1-P_b)^{8(N_{\mathrm{PH}}+N_{\mathrm{NH}}+N_{\mathrm{AH}})}
-\\
-&\cdot
 \left[
 \sum_{i=0}^{t_{\mathrm{sync}}}
-\binom{8N_{\mathrm{sync}}}{i}
+{8N_{\mathrm{sync}} \choose i}
 P_b^i
 (1-P_b)^{8N_{\mathrm{sync}}-i}
 \right]
-\\
-&\cdot
-\left\{
+\left(
 1-
 \left[
 1-(1-P_b)^{8N_{\mathrm{DH}}}
 \right]
-\left(1-2^{-r_d}\right)
-\right\}
-\\
-&\cdot
-\left\{
+(1-2^{-r_d})
+\right)
+\left(
 1-
 \left[
-1-(1-P_b)^{8N_{\mathrm{SITP\_HDR}}}
+1-(1-P_b)^{8N_{\mathrm{SITP-HDR}}}
 \right]
-\left(1-2^{-r_s}\right)
-\right\}.
-\end{aligned}
+(1-2^{-r_s})
+\right)
 $$
 
 This formulation provides a practical tool for analyzing semantic transmission over digital communication systems.
