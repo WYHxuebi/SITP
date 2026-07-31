@@ -258,12 +258,12 @@ CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
   --channel-type='awgn' \
   --C=96 \
   --multiple-snr='2,4,6,8,10,12,14' \
-  --batch-size=52
+  --batch-size=64
 ```
 
 ### Stage 2: Interleaving-Aware Fine-Tuning
 
-```
+```bash
 CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
   --nproc_per_node=2 train.py \
   --training \
@@ -274,7 +274,7 @@ CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
   --frame-loss-type='iid' \
   --C=96 \
   --multiple-snr='10' \
-  --batch-size=56 \
+  --batch-size=64 \
   --frame-len=256 \
   --interleave-mode='random' \
   --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
@@ -284,158 +284,20 @@ CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
 
 ---
 
+## 🧪 9. Evaluation
 
+We provide executable scripts for reproducing the main evaluation settings.
 
-## 🧪 Evaluation
+### AWGN Protocol Comparison
 
-### Stage 1: Backbone Evaluation
+Evaluate SITP, TCP, and UDP with different packet lengths:
 
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test.py \
-  --train-stage=1 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=256
-```
+``` bash scrips/run_awgn.sh ```
 
-### Stage 2: IID Packet-Loss Evaluation
-
-#### Sequential interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='iid' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=56 \
-  --frame-len=1024 \
-  --interleave-mode='sequential' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
-
-#### Random interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='iid' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=56 \
-  --frame-len=128 \
-  --interleave-mode='random' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
-
-### Protocol Comparison
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test_protocol.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='iid' \
-  --protocol='SITP' \
-  --C=96 \
-  --batch-size=256 \
-  --frame-len=1024 \
-  --cita=2 \
-  --interleave-mode='sequential'
-```
-
-### Gilbert-Elliott Burst-Loss Evaluation
-
-#### Sequential interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='ge' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=1 \
-  --frame-len=256 \
-  --interleave-mode='sequential' \
-  --frame-loss-rate='0.0,0.1,0.2,0.3,0.4,0.5'
-```
-
-#### Random interleaving
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='ge' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=1 \
-  --frame-len=256 \
-  --interleave-mode='random' \
-  --frame-loss-rate='0.6,0.65,0.7,0.75,0.8,0.85'
-```
-
-### Fixed Burst-Length Evaluation
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 test_protocol.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='burst' \
-  --protocol='SITP' \
-  --C=96 \
-  --batch-size=4 \
-  --frame-len=256 \
-  --interleave-mode='sequential' \
-  --burst-pkts=300
-```
-
-### Reconstruction Visualization
-
-```bash
-CUDA_VISIBLE_DEVICES=7 python -m torch.distributed.launch \
-  --nproc_per_node=1 \
-  --master-port=23456 test_save_image.py \
-  --train-stage=2 \
-  --trainset='AFHQ' \
-  --distortion-metric='MSE' \
-  --channel-type='awgn' \
-  --frame-loss-type='iid' \
-  --protocol='SITP' \
-  --C=96 \
-  --multiple-snr='10' \
-  --batch-size=4 \
-  --frame-len=256 \
-  --interleave-mode='sequential'
-```
 
 ---
 
-## 📥 Pretrained Models
+## 📥 10. Pretrained Models
 
 Pretrained models are available from:
 
