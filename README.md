@@ -288,7 +288,7 @@ CUDA_VISIBLE_DEVICES=1,7 python -m torch.distributed.launch \
 
 We provide executable scripts for reproducing the main evaluation settings.
 
-### AWGN Protocol Comparison
+### 9.1 AWGN Protocol Comparison
 
 Evaluate SITP, TCP, and UDP with different packet lengths:
 
@@ -296,7 +296,7 @@ Evaluate SITP, TCP, and UDP with different packet lengths:
 bash ./scrips/run_awgn.sh
 ```
 
-### Burst-Loss Evaluation
+### 9.2 Burst-Loss Evaluation
 
 Evaluate SITP, TCP, and UDP under consecutive burst packet losses:
 
@@ -310,12 +310,18 @@ The scripts contain the complete evaluation commands and can be modified to sele
 
 ## 📥 10. Pretrained Models
 
-Pretrained models are available from:
+Pretrained model checkpoints are available on [ModelScope](https://www.modelscope.cn/models/wyh13114873863/SITP).
 
-- [Baidu Netdisk](https://pan.baidu.com/s/13_Lb8wFVio9PFU4jiySrhA) — extraction code: `hxzo`
-- [Google Drive](https://drive.google.com/drive/folders/1YdnShbfIT03p_e30vjkV2wPKYOQPmUWp?usp=share_link)
+After downloading, place the checkpoints under the `./weight/` directory:
 
-Please place the downloaded checkpoints in the directory expected by the corresponding training or evaluation script.
+  <details>
+    ```
+    ./weight
+        /AFHQ_IW_AWGN.model
+        /IMAGENET10_IW_AWGN.model
+        ...
+    ```
+</details>
 
 ---
 
