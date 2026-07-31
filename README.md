@@ -54,7 +54,7 @@
 
 ---
 
-## 🔍 2. Overview
+## 🔍 3. Overview
 
 Conventional transport protocols such as TCP and UDP are designed around **bit-level reliability**. However, semantic communication can often reconstruct meaningful information even when the received semantic representation is partially corrupted.
 
@@ -74,17 +74,18 @@ The resulting system provides:
 ---
 
 
-## 🚀 Key Contributions
+## 🚀 4. Key Contributions
 
-### 1. Semantic Information Transport Protocol
+### (1) Semantic Information Transport Protocol
 
 SITP introduces a transport-layer design tailored to the error tolerance of semantic communication systems.
 
-| Protocol | Handshake / Retransmission | Validation Coverage | Noisy Payload Retained |
-|---|---:|---:|---:|
-| TCP | Yes | Header + payload | No |
-| UDP | No | Header + payload | No |
-| UDP-Lite | No | Header + partial payload | Partially |
+| Protocol| Handshake / Retransmission | Validation Coverage | Noisy Payload Retained |
+|---      |---:|---:|---:|
+| TCP     | 3-way handshake and ACK retrans. | Header + payload | No |
+| UDP     | No | Header + payload | No |
+| UDP-Lite| No | Header + partial payload | Partially |
+| PR-SCTP | 4-way handshake and partial retrans. | Header + partial payload | Partially |
 | **SITP (Ours)** | **No** | **Header only** | **Yes** |
 
 By retaining payloads whose headers pass verification, SITP allows the semantic decoder to exploit residual information that would otherwise be discarded.
