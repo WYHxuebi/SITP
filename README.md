@@ -89,26 +89,7 @@ SITP introduces a transport-layer design tailored to the error tolerance of sema
 | **SITP (Ours)** | **No handshake or retrans.** | **Header only** | **Yes** |
 
 ### 4.2 Cross-layer Mathematical Model of Packet Loss
-Based on SITP, a cross-layer mathematical model is established to characterize the packet-loss probability across the physical, data link, network, transport, and application layers. Furthermore, the SNR and packet-loss rate are integrated into a unified analytical formulation, enabling systematic analysis of transmission performance.
-
-We establish a unified analytical model covering the:
-
-- physical layer;
-- data-link layer;
-- network layer;
-- transport layer;
-- application layer.
-
-The model characterizes the end-to-end relationship
-
-$$
-P_{\text{Cross-fail}}(P_b)
-= 1-(1-P_{\text{Phy-fail}})
-(1-P_{\text{Dalink-fail}})
-(1-P_{\text{Net-fail}})
-(1-P_{\text{SITP-fail}})
-(1-P_{\text{App-fail}}),
-$$
+Based on SITP, we establish a unified cross-layer mathematical model to characterize the end-to-end packet-loss probability across the physical, data-link, network, transport, and application layers. By incorporating the relationship between the signal-to-noise ratio (SNR), bit-error rate $P_b$, and packet-loss probability, the model enables systematic analysis of semantic transmission performance over digital communication systems.
 
 $$
 P_{\mathrm{Cross\mbox{-}fail}}(P_b)
@@ -135,7 +116,7 @@ P_b^i
 \right)
 $$
 
-This formulation provides a practical tool for analyzing semantic transmission over digital communication systems.
+This formulation provides a practical analytical tool for evaluating the reliability of SITP-based semantic transmission under different channel conditions.
 
 ### 4.3 Cross-Image Feature Interleaving
 
