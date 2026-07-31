@@ -144,7 +144,7 @@ Instead of independently protecting each image, semantic features from multiple 
 
 ---
 
-## 📦 Installation
+## 📦 6. Installation
 
 Clone the repository:
 
