@@ -21,9 +21,8 @@
 </p>
 
 <p align="center">
-  Official implementation of the IEEE Transactions on Communications paper
   <br>
-  <b>SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication</b>.
+  <b>SITP enables low-latency and high-reliability semantic communication by validating only packet headers, preserving corrupted payloads for semantic reconstruction, and mitigating burst losses through cross-image feature interleaving.</b>.
 </p>
 
 ---
