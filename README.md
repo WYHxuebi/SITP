@@ -176,6 +176,7 @@ The processed datasets can be downloaded from our Hugging Face dataset page:
 
 After downloading, please extract the files and organize them under the './dataset' directory as follows:
   <details>
+    
     ```
     ./dataset
         /AFHQ:
