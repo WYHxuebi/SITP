@@ -80,12 +80,12 @@ The resulting system provides:
 
 SITP introduces a transport-layer design tailored to the error tolerance of semantic communication. By retaining payloads whose headers pass verification, SITP allows the semantic decoder to exploit residual information that would otherwise be discarded.
 
-| Protocol| Handshake / Retrans. | Validation Coverage | Noisy Payload Retained |
+| Protocol | Handshake / Retrans. | Validation Coverage | Noisy Payload Retained |
 |:---:|:---:|:---:|:---:|
-| TCP     | 3-way handshake and ACK retrans.| Header + payload | No |
-| UDP     | No handshake or retrans.| Header + payload | No |
-| UDP-Lite| No handshake or retrans.| Header + partial payload | Partially |
-| PR-SCTP | 4-way handshake and partial retrans.| Header + payload | Partially |
+| TCP | 3-way handshake and ACK retrans. | Header + payload | No |
+| UDP | No handshake or retrans. | Header + payload | No |
+| UDP-Lite | No handshake or retrans. | Header + partial payload | Partially |
+| PR-SCTP | 4-way handshake and partial retrans. | Header + payload | Partially |
 | **SITP (Ours)** | **No handshake or retrans.** | **Header only** | **Yes** |
 
 ### 2. Cross-Layer Packet-Loss Modeling
