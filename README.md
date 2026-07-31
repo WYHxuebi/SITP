@@ -42,6 +42,19 @@
 
 ---
 
+## 🖼️ 2. Overview Figure
+
+<p align="center">
+  <img src="./figures/Cross_Layer_Architecture.png" width="900" alt="SITP Cross Layer Architecture">
+</p>
+
+<p align="center">
+  <em>Figure 1: The cross-layer architecture of digital semantic communication based on SITP. The SITP-based framework integrates cross-layer SemCom, verifying only headers while preserving noisy payloads for semantic reconstruction. Note: AH, NH, DH, and PH denote the application-layer header, network header, data-link header, and physical-layer header, respectively.</em>
+</p>
+
+
+---
+
 ## 🔍 2. Overview
 
 <p align="center">
@@ -64,6 +77,7 @@ The resulting system provides:
 - improved resilience to burst packet losses through cross-image feature interleaving.
 
 ---
+
 
 ## 🚀 Key Contributions
 
