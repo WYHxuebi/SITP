@@ -76,7 +76,7 @@ The resulting system provides:
 
 ## 🚀 4. Key Contributions
 
-### (1) Semantic Information Transport Protocol
+### 4.1 Semantic Information Transport Protocol
 
 SITP introduces a transport-layer design tailored to the error tolerance of semantic communication. By retaining payloads whose headers pass verification, SITP allows the semantic decoder to exploit residual information that would otherwise be discarded.
 
@@ -88,7 +88,8 @@ SITP introduces a transport-layer design tailored to the error tolerance of sema
 | PR-SCTP | 4-way handshake and partial retrans. | Header + payload | Partially |
 | **SITP (Ours)** | **No handshake or retrans.** | **Header only** | **Yes** |
 
-### 2. Cross-Layer Packet-Loss Modeling
+### 4.2 Cross-layer Mathematical Model of Packet Loss
+Based on SITP, a cross-layer mathematical model is established to characterize the packet-loss probability across the physical, data link, network, transport, and application layers. Furthermore, the SNR and packet-loss rate are integrated into a unified analytical formulation, enabling systematic analysis of transmission performance.
 
 We establish a unified analytical model covering the:
 
