@@ -107,11 +107,9 @@ SNR → BER → Cross-layer packet-loss rate
 
 and provides a practical tool for analyzing semantic transmission over digital communication systems.
 
-### 3. Cross-Image Semantic Feature Interleaving
+### 4.3 Cross-Image Feature Interleaving
 
-To mitigate consecutive burst losses, SITP incorporates a cross-image semantic feature-level interleaving mechanism.
-
-Instead of independently protecting each image, semantic features from multiple images are redistributed across packets. This prevents concentrated packet losses from causing complete semantic collapse in a single image.
+To mitigate consecutive burst losses, SITP incorporates a cross-image semantic feature-level interleaving mechanism. Instead of independently protecting each image, semantic features from multiple images are redistributed across packets, which prevents concentrated packet losses from causing complete semantic collapse in a single image.
 
 ---
 
