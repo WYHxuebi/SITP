@@ -292,8 +292,19 @@ We provide executable scripts for reproducing the main evaluation settings.
 
 Evaluate SITP, TCP, and UDP with different packet lengths:
 
-``` bash scrips/run_awgn.sh ```
+``` bash 
+bash ./scrips/run_awgn.sh
+```
 
+### Burst-Loss Evaluation
+
+Evaluate SITP, TCP, and UDP under consecutive burst packet losses:
+
+``` bash 
+bash ./scrips/run_burst.sh
+```
+
+The scripts contain the complete evaluation commands and can be modified to select different datasets, protocols, packet lengths, and interleaving modes.
 
 ---
 
