@@ -44,11 +44,9 @@
 
 ## 🔍 2. Overview
 
-Conventional transport protocols such as TCP and UDP are designed around **bit-level reliability**. However, semantic communication systems can often reconstruct meaningful information even when the received semantic representation is partially corrupted.
+Conventional transport protocols such as TCP and UDP are designed around **bit-level reliability**. However, semantic communication can often reconstruct meaningful information even when the received semantic representation is partially corrupted.
 
-To bridge this gap, we propose the **Semantic Information Transport Protocol (SITP)**, a transport-layer protocol specifically designed for semantic communication.
-
-SITP follows a simple principle:
+To bridge this gap, we propose the **Semantic Information Transport Protocol (SITP)**, a transport-layer protocol specifically designed for semantic communication, which follows a simple principle:
 
 > **Verify the header, preserve the payload.**
 
@@ -59,7 +57,7 @@ The resulting system provides:
 - **TCP-level reliability** without retransmission;
 - **UDP-level latency** without connection setup;
 - robust semantic reconstruction under packet corruption;
-- improved resilience to burst packet losses through cross-image semantic feature interleaving.
+- improved resilience to burst packet losses through cross-image feature interleaving.
 
 ---
 
