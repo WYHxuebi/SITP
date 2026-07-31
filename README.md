@@ -177,7 +177,6 @@ The processed datasets can be downloaded from our Hugging Face dataset page:
 After downloading, please extract the files and organize them under the './dataset' directory as follows:
   <details>
     
-    ```
     ./dataset
         /AFHQ:
             /train:
@@ -234,7 +233,7 @@ After downloading, please extract the files and organize them under the './datas
                         /n02128757_226.JPEG
                         ...
                     ...
-    ```
+
 </details>
 
 ---
@@ -315,12 +314,11 @@ Pretrained model checkpoints are available on [ModelScope](https://www.modelscop
 After downloading, place the checkpoints under the './weight' directory:
   <details>
     
-    ```
     ./weight
         /AFHQ_IW_AWGN.model
         /IMAGENET10_IW_AWGN.model
         ...
-    ```
+    
 </details>
 
 ---
