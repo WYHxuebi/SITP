@@ -8,9 +8,6 @@
   <a href="https://ieeexplore.ieee.org/document/11517511">
     <img src="https://img.shields.io/badge/Paper-IEEE%20TCOM-blue" alt="Paper">
   </a>
-  <a href="https://huggingface.co/datasets/YunhaoWang/SITP">
-    <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Dataset-yellow" alt="Hugging Face Dataset">
-  </a>
   <a href="https://www.modelscope.cn/models/wyh13114873863/SITP">
     <img src="https://img.shields.io/badge/ModelScope-Model-624AFF" alt="ModelScope Model">
   </a>
@@ -34,7 +31,7 @@
 
 ## 📰 1. News
 
-- **[2026-07-31]** 🤗 The pretrained resources are available on [Hugging Face](https://huggingface.co/datasets/YunhaoWang/SITP) and [ModelScope](https://www.modelscope.cn/models/wyh13114873863/SITP).
+- **[2026-07-31]** 🤗 The pretrained resources are available on [ModelScope](https://www.modelscope.cn/models/wyh13114873863/SITP).
 - **[2026-07-30]** 🎉 We release the official implementation of **SITP: A High-Reliability Semantic Information Transport Protocol Without Retransmission for Semantic Communication**.
 - **[2026-05-13]** 📄 SITP was accepted by **IEEE Transactions on Communications**.
 
@@ -170,9 +167,7 @@ The experiments in this repository use the following datasets:
 - **AFHQ**
 - **ImageNet-10**
 
-The processed datasets can be downloaded from our Hugging Face dataset page:
-
-- [Hugging Face Dataset: YunhaoWang/SITP](https://huggingface.co/datasets/YunhaoWang/SITP)
+The processed datasets can be downloaded from Hugging Face dataset.
 
 After downloading, please extract the files and organize them under the './dataset' directory as follows:
   <details>
@@ -323,20 +318,7 @@ After downloading, place the checkpoints under the './weight' directory:
 
 ---
 
-## 📊 11. Results
-
-SITP is designed to provide:
-
-- lower latency than TCP by removing handshake and retransmission;
-- better reconstruction quality than UDP by retaining corrupted semantic payloads;
-- improved robustness under IID and burst packet losses;
-- additional protection through cross-image semantic feature interleaving.
-
-Detailed quantitative and qualitative results are reported in the paper.
-
----
-
-## 📝 12. Citation
+## 📝 11. Citation
 
 Please cite our paper when using this repository:
 
@@ -351,16 +333,16 @@ Please cite our paper when using this repository:
 
 ---
 
-## 📄 License
+## 📄 12. License
 
 This project is released under the license provided in the [`LICENSE`](./LICENSE) file.
 
 ---
 
-## 📬 Contact
+## 📬 13. Contact
 
 For questions or discussions, please contact:
 
 **Yunhao Wang**  
 Peking University  
-Email: `yunhaowang@stu.pku.edu.cn`
+Email: yunhaowang@stu.pku.edu.cn
